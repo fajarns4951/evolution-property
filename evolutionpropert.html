@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Updated Font Awesome CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Hello, world!</title>
+    <style>
+      .custom-card {
+        background-color: #a67637; /* Adjust color as needed */
+        border-top-right-radius: 48px;
+        border-bottom-right-radius: 48px;
+        padding: 20px;
+        color: white;
+      }
+      .list-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .list-item i {
+        margin-right: 10px;
+        color: #f7c331; /* Adjust the icon color */
+      }
+      .evolution-card {
+        border: 6px solid #fff;
+        border-radius: 30px;
+        padding: 0px 15px;
+        display: inline-block;
+        color: #fff;
+        font-weight: bold;
+      }
+      .evolution1-card {
+        border-radius: 30px;
+        padding: 0px 15px;
+        display: inline-block;
+        color: #fff;
+        font-weight: bold;
+      }
+      .cta-button {
+        background-color: #09ac45;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 30px;
+        display: inline-block;
+        margin-top: 15px;
+        font-size: 32px;
+        border: 4px solid white;
+      }
+      .h-sec4 {
+        font-weight: 900;
+        background-color: #a67637;
+        color: white;
+        padding: 0px 10px;
+        font-size: 40px;
+        display: inline-block;
+      }
+      .image1 {
+        border-radius: 30px;
+        display: inline-block;
+        background-color: #a67637;
+        color: white;
+        padding: 0px 15px;
+        font-size: 32px;
+        font-weight: bold;
+        margin-top: -10px;
+      }
+      .gallery-container {
+        max-width: 600px;
+        margin: 0 auto; /* Center the container */
+      }
+      .card img {
+        height: 200px;
+        object-fit: cover;
+      }
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        background-color: black; /* Change button background color */
+        width: 30px;
+        height: 30px;
+        border-radius: 50%; /* Make it a circle */
+      }
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 5%; /* Adjust width of the button area */
+      }
+      .whatsapp-icon {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #25d366;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .whatsapp-icon img {
+        width: 35px;
+        height: 35px;
+      }
+      .slogan {
+        font-size: 27px;
+        font-weight: 900;
+        padding: 10px 0px;
+        color: white;
+      }
+      .sec3 {
+        background-color: #a67637;
+      }
+      .div-sec3 {
+        background-image: linear-gradient(
+            to bottom,
+            rgb(255, 255, 255),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url(assets/background2.webp);
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+      }
+      .div-sec3 h1 {
+        font-weight: 900;
+        font-size: 72px;
+        line-height: 55px;
+        -webkit-text-stroke: white 2px;
+        text-shadow: black 0px 0px 15px;
+      }
+      .solusi p {
+        background-color: #a67637;
+        padding: 0px 15px;
+        display: inline-block;
+        font-size: 32px;
+        font-weight: bold;
+        border: 6px white solid;
+        border-radius: 32px;
+        margin-top: 10px;
+        color: white;
+      }
+      .text-utama {
+        display: inline-block;
+        border-radius: 24px;
+        z-index: 2;
+        position: relative;
+      }
+      .text-utama h2 {
+        background-color: #130b02;
+        color: white;
+        display: inline-block;
+        border-radius: 24px;
+        padding: 0px 15px;
+        margin-bottom: 0px;
+        border: 4px white solid;
+        font-weight: 700;
+      }
+      .text-utama2 {
+        background-color: #836135;
+        color: white;
+        display: inline-block;
+        border-radius: 16px;
+        padding: 0px 15px;
+        position: relative;
+        border: 4px white solid;
+        font-weight: 600;
+        z-index: 1;
+      }
+      .namap h1 {
+        font-weight: 900;
+        font-size: 72px;
+        line-height: 50px;
+        -webkit-text-stroke: white 2px;
+        text-shadow: black 0px 0px 15px;
+      }
+      .investasi {
+        margin: 0px;
+        background-color: #836135;
+        padding: 0px 10px;
+        color: white;
+      }
+      .judul-utama {
+        text-shadow: #130b02 0px 2px 2px;
+      }
+      .judul-utama h1 {
+        margin-top: 180px;
+        font-weight: 900;
+        font-size: 48px;
+        -webkit-text-stroke: 0.5px white;
+        width: 600px;
+      }
+      .sec1 {
+        background-image: url(assets/background1.jpg);
+        height: 1000px;
+        background-size: cover;
+        background-position: center;
+      }
+      body {
+        max-width: 600px;
+        width: 600px;
+        margin: 0 auto;
+      }
+      .bisa {
+        margin-top: 150px;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <div style="background-color: white" class="container-fluid">
+      <!-- Section 1 -->
+      <section class="d-flex justify-content-center text-center sec1">
+        <div class="judul-utama text-center">
+          <h1 class="position-absolute top-0 translate-middle-x">
+            BIKIN BANGUNAN <br />
+            JADI
+            <span class="investasi"> INVESTASI</span><br />EMANG BISA?
+          </h1>
+        </div>
+        <div>
+          <div class="position-absolute top-100 translate-middle">
+            <div class="text-center bisa">
+              <div class="text-utama">
+                <h2 class="shadow">BISA BANGET</h2>
+              </div>
+            </div>
+            <div class="text-center" style="margin-top: -8px">
+              <h3 class="shadow text-utama2">SOLUSINYA PAKAI KONTRAKTOR</h3>
+            </div>
+            <div class="namap">
+              <h1>EVOLUTION PROPERTY</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section style="background-color: #a67637">
+        <div class="text-center">
+          <h1 class="slogan">LEBIH MUDAH, AMANAH & HASIL MEWAH</h1>
+        </div>
+      </section>
+      <!-- Section 1 end -->
+      <!-- Section 2-->
+      <section class="my-4">
+        <h1 class="text-center mb-4" style="font-size: 32px">
+          Beberapa Hal Dibawah Ini Sedang Terngiang-ngiang Di Kepala?
+        </h1>
+        <div class="d-flex justify-content-start">
+          <div class="custom-card" style="font-size: 32px">
+            <div class="list-item">
+              <i class="fa fa-exclamation-triangle"></i>
+              Salah pilih kontraktor justru bikin terkor
+            </div>
+            <div class="list-item">
+              <i class="fa fa-exclamation-triangle"></i>
+              Hasil bangunan tidak sesuai desain akibat kontraktor teledor
+            </div>
+            <div class="list-item">
+              <i class="fa fa-exclamation-triangle"></i>
+              Kesulitan menentukan desain dan anggaran biaya pembangunan
+            </div>
+            <div class="list-item">
+              <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+              Tidak tahu alur dan prosedur dalam pelaksanaan pembangunan
+            </div>
+            <div class="list-item">
+              <i class="fa fa-exclamation-triangle"></i>
+              Bingung mengatur waktu namun ingin segera memproses pembangunan
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section 3 -->
+      <section>
+        <h3 class="text-center mb-4" style="font-weight: bold; font-size: 40px">
+          Jika Anda Merasakan Semua Hal Diatas, Maka Informasi Ini Akan
+          Memecahkan Masalah Anda!
+        </h3>
+      </section>
+      <section class="text-center sec3">
+        <div class="div-sec3">
+          <div>
+            <h1>EVOLUTION PROPERTY</h1>
+            <div class="solusi">
+              <p class="shadow">JADI SOLUSINYA...</p>
+            </div>
+          </div>
+        </div>
+        <p style="font-size: 32px; color: white" class="m-4">
+          <b>Evolution Property </b>merupakan jasa kontraktor berbagai bidang
+          yang melayani pembangunan rumah, ruko, cafe, home stay, kantor dll.
+          Konsep layanan yang kami usung adalah All In One Services, selain
+          pembuatan konstruksi kami juga melayani berbagai renovasi.
+        </p>
+        <div
+          style="
+            font-weight: bold;
+            background-color: #836135;
+            color: white;
+            font-size: 32px;
+          "
+        >
+          <p class="m-3">
+            Wujudkan Setiap Pembangunan Sesuai Keinginan Hati Bersama
+          </p>
+          <div style="border: white; border-radius: 16px; color: white">
+            <div style="background-color: #553915" class="evolution-card mb-3">
+              EVOLUTION PROPERTY
+            </div>
+          </div>
+        </div>
+        <a href="#" class="cta-button mb-3 shadow">
+          <i class="fa fa-whatsapp"></i> HUBUNGI KAMI DI SINI
+        </a>
+      </section>
+      <!-- Section 3 end -->
+
+      <!-- Section 4 -->
+      <section class="container text-center my-5">
+        <h3 class="mb-5" style="font-weight: bold; font-size: 40px">
+          Mengapa Harus Memilih Evolution Property?
+        </h3>
+        <!-- <div class="row">
+          <div class="col-md-6 mb-4 div-sec4">
+            <img
+              src="assets/3.PNG"
+              alt="Hasil Sesuai Desain"
+              style="width: 200px; height: 150px"
+            />
+            <h5 class="mt-3" style="font-weight: bold;">Hasil Sesuai Desain</h5>
+          </div>
+          <div class="col-md-6 mb-4">
+            <img
+              src="assets/4.PNG"
+              alt="SDM Berkualitas"
+              style="width: 200px; height: 150px"
+            />
+            <h5 style="font-weight: bold" class="mt-3">SDM Berkualitas</h5>
+          </div>
+          <div class="col-md-6 mb-4">
+            <img
+              src="assets/5.PNG"
+              alt="Finishing Mewah Berkelas"
+              style="width: 200px; height: 150px"
+            />
+            <h5 style="font-weight: bold" class="mt-3">
+              Finishing Mewah Berkelas
+            </h5>
+          </div>
+          <div class="col-md-6 mb-4">
+            <img
+              src="assets/6.PNG"
+              alt="Konsultasi Gratis"
+              style="width: 200px; height: 150px"
+            />
+            <h5 style="font-weight: bold" class="mt-3">Konsultasi Gratis</h5>
+          </div>
+          <div class="col-md-6 mb-4">
+            <img
+              src="assets/7.PNG"
+              alt="Pelayanan Terbaik"
+              style="width: 200px; height: 150px"
+            />
+            <h5 style="font-weight: bold" class="mt-3">Quality Control</h5>
+          </div>
+          <div class="col-md-6 mb-4">
+            <img
+              src="assets/8.PNG"
+              alt="Garansi Kualitas"
+              style="width: 200px; height: 150px"
+            />
+            <h5 style="font-weight: bold" class="mt-3">Struktur Aman</h5>
+          </div>
+        </div> -->
+        <div>
+          <div class="text-center row d-flex justify-content-center">
+            <div class="col-md-6 mb-4" style="width: 255px">
+              <div>
+                <img
+                  height="150px"
+                  src="assets/3.PNG"
+                  class="card-img-top"
+                  alt="Bedroom Image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title" style="font-weight: bold">
+                    Hasil Sesuai Desain
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4" style="width: 255px">
+              <div>
+                <img
+                  height="150px"
+                  src="assets/4.PNG"
+                  class="card-img-top"
+                  alt="Bathroom Image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title" style="font-weight: bold">
+                    SDM Berkualitas
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4" style="width: 255px">
+              <div>
+                <img
+                  height="150px"
+                  src="assets/5.PNG"
+                  class="card-img-top"
+                  alt="Bedroom Image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title" style="font-weight: bold">
+                    Finishing Mewah Berkelas
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4" style="width: 255px">
+              <div>
+                <img
+                  height="150px"
+                  src="assets/6.PNG"
+                  class="card-img-top"
+                  alt="Bathroom Image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title" style="font-weight: bold">
+                    Konsultasi Gratis
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4" style="width: 255px">
+              <div>
+                <img
+                  height="150px"
+                  src="assets/7.PNG"
+                  class="card-img-top"
+                  alt="Bedroom Image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title" style="font-weight: bold">
+                    Quality Control
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4" style="width: 255px">
+              <div>
+                <img
+                  height="150px"
+                  src="assets/8.PNG"
+                  class="card-img-top"
+                  alt="Bathroom Image"
+                />
+                <div class="card-body">
+                  <h5 class="card-title" style="font-weight: bold">
+                    Struktur Aman
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4 -->
+
+      <section style="background-color: #f5cff2">
+        <br />
+        <div class="jasa-pembangunan">
+          <h1 class="text-center" style="font-weight: bold">Layanan Terbaik</h1>
+          <center>
+            <div class="h-sec4">EVOLUTION PROPERTY</div>
+          </center>
+          <h1 class="text-center" style="font-weight: bold">Untuk Anda</h1>
+          <br />
+          <!-- Image 1 -->
+          <div class="d-flex justify-content-center">
+            <img
+              src="assets/interior1.jpg"
+              alt=""
+              width="300px"
+              style="border: 8px solid #3b280f; border-radius: 24px"
+            />
+          </div>
+          <div class="text-center">
+            <div class="image1">Jasa Pembangunan</div>
+            <p style="font-size: 24px; font-weight: 500" class="mx-5 mt-3">
+              Mulai dari pondasi hingga <br />
+              finishing, semua dikerjakan melalui <br />
+              quality control penuh. Dukungan tim <br />
+              kontraktor ahli dalam proses <br />
+              pembangunan tentu semakin <br />
+              memberikan hasil yang memuaskan.
+            </p>
+          </div>
+          <!-- Image 2 -->
+          <div class="d-flex justify-content-center mt-5">
+            <img
+              src="assets/interior2.jpg"
+              alt=""
+              width="300px"
+              style="border: 8px solid #3b280f; border-radius: 24px"
+            />
+          </div>
+          <div class="text-center">
+            <div class="image1">Jasa Pembangunan</div>
+            <p style="font-size: 24px; font-weight: 500" class="mx-5 mt-3">
+              Mulai dari pondasi hingga <br />
+              finishing, semua dikerjakan melalui <br />
+              quality control penuh. Dukungan tim <br />
+              kontraktor ahli dalam proses <br />
+              pembangunan tentu semakin <br />
+              memberikan hasil yang memuaskan.
+            </p>
+          </div>
+          <br />
+        </div>
+      </section>
+
+      <!-- Section 5 -->
+
+      <section>
+        <div class="container my-5 gallery-container">
+          <div
+            id="projectCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner text-center">
+              <!-- Interior project -->
+              <div class="carousel-item active">
+                <h2
+                  class="text-center mb-4"
+                  style="font-weight: 900"
+                  style="font-weight: 900"
+                >
+                  INTERIOR PROJECT
+                </h2>
+                <div class="row d-flex justify-content-center">
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/interiorproject1.PNG"
+                        class="card-img-top"
+                        alt="Pantry Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          Mrs. Silvy Residence with Enchanting Design Space
+                        </h5>
+                        <p class="card-text">Pantry, Cirebon</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/interiorproject2.PNG"
+                        class="card-img-top"
+                        alt="Living Room Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          Mrs. Silvy Residence with Enchanting Design Space
+                        </h5>
+                        <p class="card-text">Living Room, Cirebon</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/interiorproject3.PNG"
+                        class="card-img-top"
+                        alt="Pantry Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          Mrs. Silvy Residence with Enchanting Design Space
+                        </h5>
+                        <p class="card-text">Bedroom, Cirebon</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/interiorproject4.PNG"
+                        class="card-img-top"
+                        alt="Living Room Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          Mrs. Silvy Residence with Enchanting Design Space
+                        </h5>
+                        <p class="card-text">Bathroom, Cirebon</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/interiorproject5.PNG"
+                        class="card-img-top"
+                        alt="Pantry Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Reading Lounge</h5>
+                        <p class="card-text">Conceptual Proposal</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/interiorproject6.PNG"
+                        class="card-img-top"
+                        alt="Living Room Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Interior Living Room</h5>
+                        <p class="card-text">Bandung, Jawa barat</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Competition Project -->
+              <div class="carousel-item">
+                <h2 class="text-center mb-4" style="font-weight: 900">
+                  COMPETITION PROJECT
+                </h2>
+                <div class="text-center row d-flex justify-content-center">
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/competitionproject1.PNG"
+                        class="card-img-top"
+                        alt="Bedroom Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          Museum Konferensi Asia - Afrika
+                        </h5>
+                        <p class="card-text">
+                          Bandung - with Dimas Hartawan of DHWArs
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/competitionproject2.PNG"
+                        class="card-img-top"
+                        alt="Bathroom Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Small House Competition</h5>
+                        <p class="card-text">1st Prize Winner</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/competitionproject3.PNG"
+                        class="card-img-top"
+                        alt="Bedroom Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Small House Competition</h5>
+                        <p class="card-text">1st Prize Winner</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/competitionproject4.PNG"
+                        class="card-img-top"
+                        alt="Bathroom Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Bathroom Competition</h5>
+                        <p class="card-text">3rd Prize Winner</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/competitionproject5.PNG"
+                        class="card-img-top"
+                        alt="Bedroom Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Bathroom Competition</h5>
+                        <p class="card-text">3rd Prize Winner</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/competitionproject6.PNG"
+                        class="card-img-top"
+                        alt="Bathroom Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Bathroom Competition</h5>
+                        <p class="card-text">3rd Prize Competition</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Business project -->
+              <div class="carousel-item">
+                <h2 class="text-center mb-4" style="font-weight: 900">
+                  BUSINESS PROJECT
+                </h2>
+                <div class="row d-flex justify-content-center">
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/businessproject1.PNG"
+                        class="card-img-top"
+                        alt="Bedroom Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Front Office Amanah Garment</h5>
+                        <p class="card-text">Bandung, Jawa Barat</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/businessproject2.PNG"
+                        class="card-img-top"
+                        alt="Bathroom Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Pelabuhan Ratu Restort</h5>
+                        <p class="card-text">Pelabuhan Ratu</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/businessproject3.PNG"
+                        class="card-img-top"
+                        alt="Bedroom Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Pelabuhan Ratu Restort</h5>
+                        <p class="card-text">Pelabuhan Ratu</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/businessproject4.PNG"
+                        class="card-img-top"
+                        alt="Bathroom Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Pelabuhan Ratu Restort</h5>
+                        <p class="card-text">Pelabuhan Ratu</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/businessproject5.PNG"
+                        class="card-img-top"
+                        alt="Bedroom Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Peach Guest House</h5>
+                        <p class="card-text">Bandung, Jawa Barat</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/businessproject6.PNG"
+                        class="card-img-top"
+                        alt="Bathroom Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          Verdant Hotel Lobby with Ms. Grace Kashyogie
+                        </h5>
+                        <p class="card-text">Bandung, Jawa Barat</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Residence Project -->
+              <div class="carousel-item">
+                <h2 class="text-center mb-4" style="font-weight: 900">
+                  RESIDENCE PROJECT
+                </h2>
+                <div class="row d-flex justify-content-center">
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/residenceproject1.PNG"
+                        class="card-img-top"
+                        alt="Reading Lounge Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Reading Lounge</h5>
+                        <p class="card-text">Conceptual Proposal</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/residenceproject2.PNG"
+                        class="card-img-top"
+                        alt="Interior Living Room Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Interior Living Room</h5>
+                        <p class="card-text">Bandung, Jawa Barat</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/residenceproject3.PNG"
+                        class="card-img-top"
+                        alt="Reading Lounge Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Reading Lounge</h5>
+                        <p class="card-text">Conceptual Proposal</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/residenceproject4.PNG"
+                        class="card-img-top"
+                        alt="Interior Living Room Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Interior Living Room</h5>
+                        <p class="card-text">Bandung, Jawa Barat</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/residenceproject5.PNG"
+                        class="card-img-top"
+                        alt="Reading Lounge Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Reading Lounge</h5>
+                        <p class="card-text">Conceptual Proposal</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4" style="width: 255px">
+                    <div>
+                      <img
+                        src="assets/residenceproject6.PNG"
+                        class="card-img-top"
+                        alt="Interior Living Room Image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">Interior Living Room</h5>
+                        <p class="card-text">Bandung, Jawa Barat</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Left and right controls -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#projectCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+                hidden
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#projectCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+                hidden
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Section 6 -->
+      <section
+        style="
+          background-color: #130b02;
+          background-image: url(assets/bginterior.webp);
+          background-blend-mode: overlay;
+          background-size: cover;
+        "
+        class="text-center"
+      >
+        <p style="font-size: 32px; color: white" class="m-4">
+          Sudah Saatnya Untuk Tidak Memikirkan Hal Lain
+        </p>
+        <p style="font-size: 32px; color: white" class="m-4">
+          Fokus Dengan Pilihan Terbaik Yang Ada Di Depan Mata
+        </p>
+        <div
+          class="mb-4"
+          style="font-weight: bold; color: white; font-size: 46px"
+        >
+          <div style="background-color: #553915" class="evolution1-card mb-3">
+            EVOLUTION PROPERTY
+          </div>
+          Siap Menemani Setiap Proses Anda
+        </div>
+        <a href="#" class="cta-button mb-3 shadow">
+          <i class="fa fa-whatsapp"></i> HUBUNGI KAMI DI SINI
+        </a>
+      </section>
+      <!-- Section 6 end -->
+
+      <!-- Section 7 -->
+      <section style="background-color: #f5cff2">
+        <br />
+        <div>
+          <h1 class="text-center" style="font-weight: bold">
+            Berikut Adalah <br />
+            Testimoni Beberapa <br />
+            Klien Evolution Property
+          </h1>
+          <br />
+          <!-- Image 1 -->
+          <div class="d-flex justify-content-center">
+            <img src="assets/testi.PNG" alt="" width="550px" />
+          </div>
+          <!-- Image 2 -->
+          <div class="d-flex justify-content-center mt-5"></div>
+          <div class="text-center">
+            <h1 style="font-weight: bold">
+              Beberapa Portofolio Pelaksanaan <br />Proyek Terbaru <br />
+              Yang Kami Kerjakan
+            </h1>
+            <!-- <div class="row mt-5 ">
+              <div class="col-md-6 mb-4">
+                <img
+                  src="assets/portofolio1.PNG"
+                  alt=""
+                  style="width: 250px; height: 300px"
+                />
+              </div>
+              <div class="col-md-6 mb-4">
+                <img
+                  src="assets/portofolio2.PNG"
+                  alt=""
+                  style="width: 250px; height: 300px"
+                />
+              </div>
+              <div class="col-md-6 mb-4">
+                <img
+                  src="assets/portofolio3.PNG"
+                  alt=""
+                  style="width: 250px; height: 300px"
+                />
+              </div>
+              <div class="col-md-6 mb-4">
+                <img
+                  src="assets/portofolio4.PNG"
+                  alt=""
+                  style="width: 250px; height: 300px"
+                />
+              </div>
+              <div class="col-md-6 mb-4">
+                <img
+                  src="assets/portofolio5.PNG"
+                  alt=""
+                  style="width: 250px; height: 300px"
+                />
+              </div>
+              <div class="col-md-6 mb-4">
+                <img
+                  src="assets/portofolio6.PNG"
+                  alt=""
+                  style="width: 250px; height: 300px"
+                />
+              </div>
+              <div class="col-md-6 mb-4">
+                <img
+                  src="assets/portofolio7.PNG"
+                  alt=""
+                  style="width: 250px; height: 300px"
+                />
+              </div>
+              <div class="col-md-6 mb-4">
+                <img
+                  src="assets/portofolio8.PNG"
+                  alt=""
+                  style="width: 250px; height: 300px"
+                />
+              </div>
+              <div class="col-md-6 mb-4">
+                <img
+                  src="assets/portofolio9.PNG"
+                  alt=""
+                  style="width: 250px; height: 300px"
+                />
+              </div>
+              <div class="col-md-6 mb-4">
+                <img
+                  src="assets/portofolio10.PNG"
+                  alt=""
+                  style="width: 250px; height: 300px"
+                />
+              </div>
+              <div class="col-md-6 mb-4">
+                <img
+                  src="assets/portofolio11.PNG"
+                  alt=""
+                  style="width: 250px; height: 300px"
+                />
+              </div>
+              <div class="col-md-6 mb-4">
+                <img
+                  src="assets/portofolio12.PNG"
+                  alt=""
+                  style="width: 250px; height: 300px"
+                />
+              </div>
+            </div> -->
+          </div>
+          <div">
+          <div class="text-center row d-flex justify-content-center">
+            <div class="col-md-6 mb-4" style="width: 255px">
+              <div>
+                <img
+                  src="assets/portofolio1.PNG"
+                  class="card-img-top"
+                  alt="Bedroom Image"
+                />
+              </div>
+            </div>
+            <div class="col-md-6 mb-4" style="width: 255px">
+              <div>
+                <img
+                  src="assets/portofolio2.PNG"
+                  class="card-img-top"
+                  alt="Bedroom Image"
+                />
+              </div>
+            </div>
+            <div class="col-md-6 mb-4" style="width: 255px">
+              <div>
+                <img
+                  src="assets/portofolio3.PNG"
+                  class="card-img-top"
+                  alt="Bedroom Image"
+                />
+              </div>
+            </div>
+            <div class="col-md-6 mb-4" style="width: 255px">
+              <div>
+                <img
+                  src="assets/portofolio4.PNG"
+                  class="card-img-top"
+                  alt="Bathroom Image"
+                />
+              </div>
+            </div>
+            <div class="col-md-6 mb-4" style="width: 255px">
+              <div>
+                <img
+                  src="assets/portofolio5.PNG"
+                  class="card-img-top"
+                  alt="Bedroom Image"
+                />
+              </div>
+            </div>
+            <div class="col-md-6 mb-4" style="width: 255px">
+              <div>
+                <img
+                  src="assets/portofolio6.PNG"
+                  class="card-img-top"
+                  alt="Bathroom Image"
+                />
+              </div>
+            </div>
+            <div class="col-md-6 mb-4" style="width: 255px">
+              <div>
+                <img
+                  src="assets/portofolio7.PNG"
+                  class="card-img-top"
+                  alt="Bedroom Image"
+                />
+              </div>
+            </div>
+            <div class="col-md-6 mb-4" style="width: 255px">
+              <div>
+                <img
+                  src="assets/portofolio8.PNG"
+                  class="card-img-top"
+                  alt="Bathroom Image"
+                />
+              </div>
+            </div>
+            <div class="col-md-6 mb-4" style="width: 255px">
+              <div>
+                <img
+                  src="assets/portofolio9.PNG"
+                  class="card-img-top"
+                  alt="Bathroom Image"
+                />
+              </div>
+            </div>
+            <div class="col-md-6 mb-4" style="width: 255px">
+              <div>
+                <img
+                  src="assets/portofolio10.PNG"
+                  class="card-img-top"
+                  alt="Bathroom Image"
+                />
+              </div>
+            </div>
+            <div class="col-md-6 mb-4" style="width: 255px">
+              <div>
+                <img
+                  src="assets/portofolio11.PNG"
+                  class="card-img-top"
+                  alt="Bathroom Image"
+                />
+              </div>
+            </div>
+            <div class="col-md-6 mb-4" style="width: 255px">
+              <div>
+                <img
+                  src="assets/portofolio12.PNG"
+                  class="card-img-top"
+                  alt="Bathroom Image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+      </section>
+      <!-- Section 7 end -->
+
+      <!-- Section 8 -->
+      <section>
+        <br />
+        <h1 class="text-center" style="font-weight: bold; font-size: 40px">
+          Berapa Biaya Saat <br />
+          Menggunakan Kontraktor Evolution Property
+        </h1>
+        <center>
+          <div class="h-sec4" style="border-radius: 32px">LEBIH TERJANGKAU</div>
+        </center>
+        <h2 class="text-center mt-3">
+          Biaya menyesuaikan dengan <br />
+          bangunan yang dikerjakan.<br />
+          Tentu akan mendapatkan RAB <br />
+          yang transparan
+        </h2>
+      </section>
+      <!-- Section 8 end -->
+      <!-- Section 9 -->
+      <section
+        style="
+          background-color: #130b02;
+          background-image: url(assets/bginterior.webp);
+          background-blend-mode: overlay;
+          background-size: cover;
+        "
+        class="text-center"
+      >
+        <p style="font-size: 56px; color: white" class="m-4">Jangan Sampai</p>
+        <p style="font-size: 56px; color: white" class="m-4">Salah Memilih</p>
+        <div style="font-weight: bold; color: white; font-size: 46px">
+          <div style="color: black" class="evolution1-card mb-3">
+            <p
+              style="
+                -webkit-text-stroke: 1px white;
+                font-weight: 900;
+                font-size: 48px;
+                text-shadow: white 0px 2px 8px;
+              "
+            >
+              EVOLUTION PROPERTY
+            </p>
+          </div>
+        </div>
+        <h1 style="font-size: 40px; color: white">
+          adalah pilihan kontraktor <br />
+          yang menjanjukan untuk anda
+        </h1>
+        <a href="#" class="cta-button mb-3 shadow">
+          <i class="fa fa-whatsapp"></i> HUBUNGI KAMI DI SINI
+        </a>
+      </section>
+      <!-- Section 9 end -->
+      <!-- Whatsapp -->
+      <a href="#" class="whatsapp-icon" target="_blank">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png"
+          alt="WhatsApp"
+        />
+      </a>
+
+      <!-- End Whatsapp -->
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
